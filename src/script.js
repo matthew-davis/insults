@@ -6,7 +6,12 @@ const listA = ["filthy ", "crusty ", "rusty ", "stupid ", "stinky ", "lumpy ", "
 const listB = ["crap ", "butt ", "turd ", "bum ", "poop ", "puss ", "rod ", "puke ", "weiner ", "fart ", "nut ", "trash ", "dong "];
 const listC = ["mammoth!", "explorer!", "lizard!", "wizard!", "tunnel!", "fairy!", "hamster!", "captain!", "dragon!", "weasel!", "goblin!", "pirate!", "banjo!"];
 
-const random = (list) => list[Math.floor(Math.random() * list.length)];
-const insult = () => partInsult + random(listA) + random(listB) + random(listC);
+function random(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+function insult() {
+  return partInsult + random(listA) + random(listB) + random(listC);
+}
 
 button.addEventListener('click', () => el.innerHTML = insult());
